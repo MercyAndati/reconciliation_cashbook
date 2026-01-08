@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Multi-Sheet Data Splitter", layout="wide")
+st.set_page_config(page_title="Mpesa Data Splitter", layout="wide")
 
 st.title("📂 Monthly Cash Book Splitter")
 st.markdown("Select a month (sheet) to extract and split into Mpesa and Non-Mpesa files.")
