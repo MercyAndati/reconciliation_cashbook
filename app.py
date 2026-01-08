@@ -23,13 +23,12 @@ if uploaded_file:
     selected_sheet = st.selectbox("Select the Sheet/Month to process:", sheet_names)
     
     # 2. Load the specific sheet
-    # We skip rows to find the headers as we did before
+    # We skip rows to find the headers
     df = pd.read_excel(uploaded_file, sheet_name=selected_sheet)
     
     st.info(f"Currently viewing: **{selected_sheet}**")
     
     # 3. Choose the Particulars Column
-    # Using a key helps streamlit remember the choice
     part_col = st.selectbox("Select the 'Particulars' Column:", df.columns, key=f"col_{selected_sheet}")
     
     # 4. Processing Logic
